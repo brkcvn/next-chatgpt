@@ -1,0 +1,23 @@
+.success .CircularProgressbar .CircularProgressbar-path {
+    stroke: #14532d;
+}
+
+.success .CircularProgressbar .CircularProgressbar-text {
+    fill: #14532d;
+}
+
+.warning .CircularProgressbar .CircularProgressbar-path {
+    stroke: #7c2d12;
+}
+
+.warning .CircularProgressbar .CircularProgressbar-text {
+    fill: #7c2d12;
+}
+
+.error .CircularProgressbar .CircularProgressbar-path {
+    stroke: #7f1d1d;
+}
+
+.error .CircularProgressbar .CircularProgressbar-text {
+    fill: #7f1d1d;
+}
