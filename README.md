@@ -17,6 +17,22 @@ You can get just historical information for weekly and monthly so you enter prev
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" width=48 height=48>
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Tailwind_CSS_logo.svg" width=100 height=25>
 
+# Getting Started
+
+## Prerequisites
+```
+npm install npm@latest -g
+```
+
+## Installation
+- Get a API Key for ChatGPT at https://platform.openai.com/
+- More information at https://platform.openai.com/docs/introduction/overview
+- Clone the repo
+```
+npm install npm@latest -g
+```
+
+
 ```bash
 npx create-next-app --example with-redux with-redux-app
 ```
