@@ -1,12 +1,18 @@
-# Next.js development with ChatGPT
+# How to use Next.js with ChatGPT ?
 
-## About Project
+## About The Project
 
-This application was made to measure the amount of water you spend at home. Main reason of this development, how can you use Next.js with ChatGPT. Also You can use state management
+- This application was made to measure the amount of water you spend at home. Main reason of this development, how can you use Next.js with ChatGPT.
 
-You can see that you have exceeded or not exceeded  the intermediate and upper limit by entering the water you spend daily, previous weekly and previous monthly.
+- You can see that you have exceeded or not exceeded  the intermediate and upper limit by entering the water you spend daily, previous weekly and previous monthly.
 
-You can get just historical information for weekly and monthly so you enter previous data both of them.
+- You can get just historical information for weekly and monthly so you enter previous data both of them.
+
+- According to the amount of water you spend daily, a message will be sent to you via ChatGPT.
+
+- You can use state management with Redux Toolkit.
+
+- This product integrated to PWA so you can use offline environment of internet connection.
 
 ## Built With
 
@@ -25,13 +31,13 @@ npm install npm@latest -g
 ```
 
 ## Installation
-- Get a API Key for ChatGPT at https://platform.openai.com/
-- More information at https://platform.openai.com/docs/introduction/overview
 - Clone the repo
 ```bash
 https://github.com/brkcvn/next-chatgpt.git
 ```
-- Enter your API in config.js
+- Get a API Key for ChatGPT at https://platform.openai.com/
+- More information at https://platform.openai.com/docs/introduction/overview
+- Enter your API in src/components/_daily.tsx
 ```bash
-const API_KEY = "ENTER YOUR API" in src/components/_daily.tsx;
+const API_KEY = "ENTER YOUR API";
 ```
