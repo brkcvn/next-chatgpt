@@ -1,29 +1,43 @@
-# Redux Toolkit TypeScript Example
+# How to use Next.js with ChatGPT ?
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+## About The Project
 
-The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension). This example demonstrates each of these features with Next.js
+- This application was made to measure the amount of water you spend at home. Main reason of this development, how can you use Next.js with ChatGPT.
 
-## Deploy your own
+- You can see that you have exceeded or not exceeded  the intermediate and upper limit by entering the water you spend daily, previous weekly and previous monthly.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- You can get just historical information for weekly and monthly so you enter previous data both of them.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
+- According to the amount of water you spend daily, a message will be sent to you via ChatGPT.
 
-## How to use
+- You can use state management with Redux Toolkit.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+- This product integrated to PWA so you can use offline environment of internet connection.
 
+## Built With
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width=48 height=48>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width=48 height=48 />
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width=48 height=48>
+<img src="https://cdn.worldvectorlogo.com/logos/redux.svg" width=48 height=48>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" width=48 height=48>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Tailwind_CSS_logo.svg" width=100 height=25>
+
+# Getting Started
+
+## Prerequisites
 ```bash
-npx create-next-app --example with-redux with-redux-app
+npm install npm@latest -g
 ```
 
+## Installation
+- Clone the repo
 ```bash
-yarn create next-app --example with-redux with-redux-app
+https://github.com/brkcvn/next-chatgpt.git
 ```
-
+- Get a API Key for ChatGPT at https://platform.openai.com/
+- More information at https://platform.openai.com/docs/introduction/overview
+- Enter your API in src/components/_daily.tsx
 ```bash
-pnpm create next-app --example with-redux with-redux-app
+const API_KEY = "ENTER YOUR API";
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).

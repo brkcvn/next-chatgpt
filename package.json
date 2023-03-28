@@ -35,8 +35,8 @@
     "ts-node": "^10.2.1",
     "typescript": "^4.3.4"
   },
-  "name": "with-redux-app",
-  "description": "This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).",
+  "name": "next-chatgpt",
+  "description": "This application was made to measure the amount of water you spend at home. Main reason of this development, how can you use Next.js with ChatGPT.",
   "version": "1.0.0",
   "main": "index.js",
   "author": "",
