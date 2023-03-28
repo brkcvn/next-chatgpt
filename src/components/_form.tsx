@@ -63,7 +63,7 @@ export default function Form(props: { [key: string]: any }) {
                     className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
                 >
                     <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="daily">
+                        <label className="block text-gray-700 text-xs font-bold mb-2" htmlFor="daily">
                             Your amount of spend water at daily (m³)
                         </label>
                         <input
@@ -85,8 +85,8 @@ export default function Form(props: { [key: string]: any }) {
                     </div>
 
                     <div className="mb-6">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="weekly">
-                            Your amount of spend water at weekly (m³)
+                        <label className="block text-gray-700 text-xs font-bold mb-2" htmlFor="weekly">
+                            Your amount of spend water at previous weekly (m³)
                         </label>
                         <input
                             name="weekly"
@@ -106,8 +106,8 @@ export default function Form(props: { [key: string]: any }) {
                     </div>
 
                     <div className="mb-6">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="monthly">
-                            Your amount of spend water at monthly (m³)
+                        <label className="block text-gray-700 text-xs font-bold mb-2" htmlFor="monthly">
+                            Your amount of spend water at previous monthly (m³)
                         </label>
                         <input
                             name="monthly"

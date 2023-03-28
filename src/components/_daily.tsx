@@ -94,7 +94,7 @@ export default function Daily(props: DailyProps) {
                     }
                 })()}
 
-                <div className='flex flex-col items-center space-y-2'>
+                <div className='flex flex-col items-center'>
                     <span> {info.text} </span>
 
                     <span className="material-symbols-outlined">
