@@ -20,7 +20,7 @@ You can get just historical information for weekly and monthly so you enter prev
 # Getting Started
 
 ## Prerequisites
-```
+```bash
 npm install npm@latest -g
 ```
 
@@ -28,21 +28,10 @@ npm install npm@latest -g
 - Get a API Key for ChatGPT at https://platform.openai.com/
 - More information at https://platform.openai.com/docs/introduction/overview
 - Clone the repo
-```
-npm install npm@latest -g
-```
-
-
 ```bash
-npx create-next-app --example with-redux with-redux-app
+https://github.com/brkcvn/next-chatgpt.git
 ```
-
+- Enter your API in config.js
 ```bash
-yarn create next-app --example with-redux with-redux-app
+const API_KEY = "ENTER YOUR API" in src/components/_daily.tsx;
 ```
-
-```bash
-pnpm create next-app --example with-redux with-redux-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
