@@ -26,7 +26,7 @@ export default function Daily(props: DailyProps) {
 
     useEffect(() => {
         const API_KEY = "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";
-        const INFO_TEXT = `Günlük üst limitim ${props.action.daily.inter_limit} metreküp. Bugün ${props.action.daily.spend_water} metreküp su harcadım`;
+        const INFO_TEXT = `My daily limit is ${props.action.daily.limit} for spend water. I spent ${props.action.daily.spend_water} today.`;
 
         setTimeout(() => {
             const MessageChatGPT = () => {
@@ -57,8 +57,7 @@ export default function Daily(props: DailyProps) {
                         })
                     });
             }
-
-            MessageChatGPT()
+            MessageChatGPT();
         }, 1000);
     }, [props]);
 
@@ -66,19 +65,11 @@ export default function Daily(props: DailyProps) {
         <div
             className={`flex flex-col items-center justify-center text-green-900 rounded-md p-3 my-3 space-y-3 bg-${props.action.daily.color}-300 text-${props.action.daily.color}-900`}
         >
-            <div className='flex flex-col text-center'>
-                <span className='text-sm'>Günlük harcadığınız su miktarı <br /> Mayıs ayı</span>
+            <div className='flex flex-col items-center text-center'>
+                <span className='text-lg'>Your spend water at daily </span>
 
                 <span className='text-xl font-bold'>
                     {props.action.daily.spend_water} m³
-                </span>
-
-                <span className='flex items-center text-xs'>
-                    {props.action.daily.text}
-
-                    <span className="material-symbols-outlined ml-2">
-                        {props.action.daily.icon}
-                    </span>
                 </span>
 
                 <Progress
@@ -89,7 +80,7 @@ export default function Daily(props: DailyProps) {
 
             <Bottom data={props.action.daily} />
 
-            <span className='font-bold text-underline text-sm text-center'>
+            <div className='font-bold text-underline text-sm text-center'>
                 {(() => {
                     if (info.loading) {
                         return (
@@ -102,8 +93,15 @@ export default function Daily(props: DailyProps) {
                         )
                     }
                 })()}
-                {info.text}
-            </span>
+
+                <div className='flex flex-col items-center space-y-2'>
+                    <span> {info.text} </span>
+
+                    <span className="material-symbols-outlined">
+                        {props.action.daily.icon}
+                    </span>
+                </div>
+            </div>
         </div>
     )
 }

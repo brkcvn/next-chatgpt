@@ -13,16 +13,17 @@ interface ActionProps {
   state?: any
 }
 
-const IndexPage: NextPage = ({ state }: ActionProps) => {
+const FormPage: NextPage = ({ state }: ActionProps) => {
   state = useAppSelector((state) => state);
 
   const actionProps = {
     action: state.action,
   }
+  
   return (
     <div>
       <Head>
-        <title>Redux Toolkit</title>
+        <title>Form Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -31,4 +32,4 @@ const IndexPage: NextPage = ({ state }: ActionProps) => {
   )
 }
 
-export default IndexPage
+export default FormPage;

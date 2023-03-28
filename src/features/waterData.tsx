@@ -88,9 +88,9 @@ const initialState: ActionState = {
     },
 
     text: {
-        success: 'Tebrikler harcadığın su miktarı gayet iyi',
-        warning: 'Biraz daha az su harcayabilirsin',
-        error: 'Maalesef çok su harcıyorsunuz'
+        success: 'Congrats, the amount of water you spend is very well',
+        warning: 'You can less spend water',
+        error: 'Unfortunately, you much more spend water'
     },
 
     icon: {
@@ -136,7 +136,7 @@ export const createData = createSlice({
             state.daily.percentage = state.daily.spend_water / state.daily.limit * 100;
         },
 
-        Submit: (state, form) => {
+        submit: (state, form) => {
             state.daily.spend_water = form.payload.daily;
             state.weekly.spend_water = form.payload.weekly;
             state.monthly.spend_water = form.payload.monthly;
@@ -144,6 +144,6 @@ export const createData = createSlice({
     },
 });
 
-export const { Submit, percantageActions, inpuChangeAction } = createData.actions;
+export const { submit, percantageActions, inpuChangeAction } = createData.actions;
 
 export default createData.reducer;

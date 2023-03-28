@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 // redux
-import { useAppDispatch } from '../hooks'
-import { Submit, inpuChangeAction } from '../features/waterData';
+import { useAppDispatch } from '../hooks';
+import { submit, inpuChangeAction } from '../features/waterData';
 // redux
 
 // router
@@ -15,7 +15,7 @@ interface FormProps {
     monthly: number
 }
 
-export default function Form(props: any) {
+export default function Form(props: { [key: string]: any }) {
     const dispatch = useAppDispatch();
     const router = useRouter();
 
@@ -49,13 +49,13 @@ export default function Form(props: any) {
     function onSubmitForm(event: any) {
         event.preventDefault();
 
-        dispatch(Submit(spendWater));
+        dispatch(submit(spendWater));
         router.push('/statitics');
     }
 
     return (
         <div className="h-screen bg-gray-200">
-            <div className="w-full max-w-lg mx-auto py-12">
+            <div className="w-full max-w-lg mx-auto px-4 py-12">
                 <form
                     action="#"
                     method="POST"
@@ -64,7 +64,7 @@ export default function Form(props: any) {
                 >
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="daily">
-                            Günlük harcadığınız su miktarı (m³)
+                            Your amount of spend water at daily (m³)
                         </label>
                         <input
                             name="daily"
@@ -75,7 +75,7 @@ export default function Form(props: any) {
                             required
                             onChange={onHandleChange}
                             onBlur={onHandleBlur}
-                            placeholder="Ör: 0.2"
+                            placeholder="Ex: 0.2"
                         />
 
                         <span className={"text-sm text-" + (props.action.daily.color)}
@@ -86,7 +86,7 @@ export default function Form(props: any) {
 
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="weekly">
-                            Haftalık harcadığınız su miktarı (m³)
+                            Your amount of spend water at weekly (m³)
                         </label>
                         <input
                             name="weekly"
@@ -96,7 +96,7 @@ export default function Form(props: any) {
                             className={`bg-${props.action.weekly.color}-300 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
                             onChange={onHandleChange}
                             onBlur={onHandleBlur}
-                            placeholder="Ör: 3"
+                            placeholder="Ex: 3"
                         />
 
                         <span className={"text-sm text-" + (props.action.weekly.color)}
@@ -107,7 +107,7 @@ export default function Form(props: any) {
 
                     <div className="mb-6">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="monthly">
-                            Aylık harcadığınız su miktarı (m³)
+                            Your amount of spend water at monthly (m³)
                         </label>
                         <input
                             name="monthly"
@@ -118,7 +118,7 @@ export default function Form(props: any) {
                             required
                             onChange={onHandleChange}
                             onBlur={onHandleBlur}
-                            placeholder="Ör: 10"
+                            placeholder="Ex: 10"
                         />
 
                         <span className={`text-sm text-${props.action.monthly.color}`}
@@ -132,7 +132,7 @@ export default function Form(props: any) {
                             type='submit'
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
-                            Gönder
+                            Submit
                         </button>
                     </div>
                 </form>

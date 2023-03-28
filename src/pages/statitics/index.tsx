@@ -13,17 +13,18 @@ interface ActionProps {
   state?: any
 }
 
-const IndexPage: NextPage = ({ state }: ActionProps) => {
+const StatiticsPage: NextPage = ({ state }: ActionProps) => {
   state = useAppSelector((state) => state);
 
   const actionProps = {
     action: state.action,
   }
   return (
-    <div>
+    <div className='p-3'>
       <Head>
-        <title>Redux Toolkit</title>
+        <title>Statitics Page</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
       </Head>
 
       <Statitics {...actionProps} />
@@ -31,4 +32,4 @@ const IndexPage: NextPage = ({ state }: ActionProps) => {
   )
 }
 
-export default IndexPage
+export default StatiticsPage;
