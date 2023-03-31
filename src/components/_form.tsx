@@ -19,6 +19,7 @@ interface Form {
 export default function Form(inputField: any) {
     const dispatch = useAppDispatch();
     const router = useRouter();
+    inputField = useRef(null);
 
     const [spendWater, setSpendWater] = useState<Form>({
         daily: 0,
