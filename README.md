@@ -4,9 +4,9 @@
 
 - This application was made to measure the amount of water you spend at home. Main reason of this development, how can you use Next.js with ChatGPT. <a href="https://next-chatgpt-last.vercel.app/" target="_blank">Demo Link</a>
 
-- You can see that you have exceeded or not exceeded  the intermediate and upper limit by entering the water you spend daily, previous weekly and previous monthly.
+- You can see that you have exceeded or not exceeded the intermediate and upper limit by entering the water you spend daily, estimated weekly and estimated monthly.
 
-- You can get just historical information for weekly and monthly so you enter previous data both of them.
+- If you enter daily value, you can learn amount the estimated weekly and monthly.
 
 - According to the amount of water you spend daily, a message will be sent to you via ChatGPT.
 
