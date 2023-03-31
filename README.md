@@ -2,7 +2,7 @@
 
 ## About The Project
 
-- This application was made to measure the amount of water you spend at home. Main reason of this development, how can you use Next.js with ChatGPT.
+- This application was made to measure the amount of water you spend at home. Main reason of this development, how can you use Next.js with ChatGPT. <a href="https://next-chatgpt-last.vercel.app/" target="_blank">Demo Link</a>
 
 - You can see that you have exceeded or not exceeded  the intermediate and upper limit by entering the water you spend daily, previous weekly and previous monthly.
 
