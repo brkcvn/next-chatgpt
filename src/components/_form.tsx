@@ -82,7 +82,7 @@ export default function Form(inputField: any) {
                     <div className="flex items-center justify-between">
                         <button
                             type='submit'
-                            disabled={isSubmit}
+                            disabled={spendWater.isSubmit}
                             className="bg-gray-700 text-white font-bold py-2 px-3 rounded transition-all disabled:bg-gray-300 hover:bg-gray-900 focus:outline-none focus:shadow-outline"
                         >
                             Submit
