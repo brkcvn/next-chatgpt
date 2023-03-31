@@ -6,7 +6,7 @@
 
 - You can see that you have exceeded or not exceeded the intermediate and upper limit by entering the water you spend daily, estimated weekly and estimated monthly.
 
-- If you enter daily value, you can learn amount the estimated weekly and monthly.
+- If you enter daily amount, you can learn amount the estimated weekly and monthly.
 
 - According to the amount of water you spend daily, a message will be sent to you via ChatGPT.
 
