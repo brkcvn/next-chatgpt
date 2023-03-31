@@ -48,6 +48,8 @@ interface ActionState {
         warning: string,
         error: string
     },
+
+    API_KEY: string
 }
 
 const initialState: ActionState = {
@@ -98,6 +100,8 @@ const initialState: ActionState = {
         warning: 'warning',
         error: 'mood_bad'
     },
+
+    API_KEY: '',
 }
 
 
@@ -105,45 +109,43 @@ export const createData = createSlice({
     name: 'water-data',
     initialState,
     reducers: {
-        inpuChangeAction: (state: any, action) => {
-            state[action.payload.name].spend_water = Number(action.payload.value);
-            let name = action.payload.name;
-
-            state.status[name] = state[name].spend_water <= state[name].inter_limit ? 'success' : 'error' && state[name].spend_water >= state[name].inter_limit && state[name].spend_water <= state[name].limit ? 'warning' : 'error';
-
-            switch (true) {
-                case state.status[name] === 'success':
-                    state[name].color = 'green';
-                    state[name].text = state.text.success;
-                    state[name].icon = state.icon.success;
-                    break;
-                case state.status[name] === 'warning':
-                    state[name].color = 'orange';
-                    state[name].text = state.text.warning;
-                    state[name].icon = state.icon.warning;
-                    break;
-                case state.status[name] === 'error':
-                    state[name].color = 'red';
-                    state[name].text = state.text.error;
-                    state[name].icon = state.icon.error;
-                    break;
-            }
-        },
-
         percantageActions: (state) => {
             state.monthly.percentage = state.monthly.spend_water / state.monthly.limit * 100;
             state.weekly.percentage = state.weekly.spend_water / state.weekly.limit * 100;
             state.daily.percentage = state.daily.spend_water / state.daily.limit * 100;
         },
 
-        submit: (state, form) => {
-            state.daily.spend_water = form.payload.daily;
-            state.weekly.spend_water = form.payload.weekly;
-            state.monthly.spend_water = form.payload.monthly;
+        submit: (state:any, action) => {
+            for (const [key, value] of Object.entries(action.payload)) {
+                if (key === 'isSubmit') {
+                    return;
+                }
+
+                state[key].spend_water = value;
+                state.status[key] = state[key].spend_water <= state[key].inter_limit ? 'success' : 'error' && state[key].spend_water >= state[key].inter_limit && state[key].spend_water <= state[key].limit ? 'warning' : 'error';
+
+                switch (true) {
+                    case state.status[key] === 'success':
+                        state[key].color = 'green';
+                        state[key].text = state.text.success;
+                        state[key].icon = state.icon.success;
+                        break;
+                    case state.status[key] === 'warning':
+                        state[key].color = 'orange';
+                        state[key].text = state.text.warning;
+                        state[key].icon = state.icon.warning;
+                        break;
+                    case state.status[key] === 'error':
+                        state[key].color = 'red';
+                        state[key].text = state.text.error;
+                        state[key].icon = state.icon.error;
+                        break;
+                }
+            }
         }
     },
 });
 
-export const { submit, percantageActions, inpuChangeAction } = createData.actions;
+export const { submit, percantageActions } = createData.actions;
 
 export default createData.reducer;

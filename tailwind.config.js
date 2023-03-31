@@ -10,6 +10,9 @@ module.exports = {
       {
           pattern: /^text/,
       },
+      {
+        pattern: /^border/,
+    },
   ],
   theme: {
       extend: {
