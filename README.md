@@ -39,5 +39,5 @@ https://github.com/brkcvn/next-chatgpt.git
 - More information at https://platform.openai.com/docs/introduction/overview
 - Enter your API in src/features/waterData.tsx
 ```bash
-const API_KEY = "ENTER YOUR API";
+API_KEY = "ENTER YOUR API";
 ```
