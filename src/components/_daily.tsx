@@ -25,7 +25,6 @@ export default function Daily(props: DailyProps) {
     });
 
     useEffect(() => {
-        //Get a API Key for ChatGPT at https://platform.openai.com/
         const INFO_TEXT = `My daily limit is ${props.action.daily.limit} for spend water. I spent ${props.action.daily.spend_water} today`;
 
         setTimeout(() => {

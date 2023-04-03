@@ -37,7 +37,7 @@ https://github.com/brkcvn/next-chatgpt.git
 ```
 - Get a API Key for ChatGPT at https://platform.openai.com/
 - More information at https://platform.openai.com/docs/introduction/overview
-- Enter your API in src/components/_daily.tsx
+- Enter your API in src/features/waterData.tsx
 ```bash
 const API_KEY = "ENTER YOUR API";
 ```

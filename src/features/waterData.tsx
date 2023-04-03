@@ -101,6 +101,7 @@ const initialState: ActionState = {
         error: 'mood_bad'
     },
 
+    //Get a API Key for ChatGPT at https://platform.openai.com/
     API_KEY: '',
 }
 
