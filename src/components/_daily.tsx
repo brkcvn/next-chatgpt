@@ -62,7 +62,7 @@ export default function Daily(props: DailyProps) {
 
     return (
         <div
-            className={`flex flex-col items-center justify-center text-green-900 rounded-md p-3 my-3 space-y-3 bg-${props.action.daily.color}-300 text-${props.action.daily.color}-900`}
+            className={`h-screen flex flex-col items-center justify-center text-green-900 rounded-md p-3 my-3 space-y-3 bg-${props.action.daily.color}-300 text-${props.action.daily.color}-900`}
         >
             <div className='flex flex-col items-center text-center'>
                 <span className='text-lg'>Your spend water at daily </span>
