@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 //components
-import Statitics from '../../components/_statitics';
+import Statitics from '../components/_statitics';
 //components
 
 //redux hook
-import { useAppSelector } from '../../hooks';
+import { useAppSelector } from '../hooks';
 //redux hook
 
 interface ActionProps {
